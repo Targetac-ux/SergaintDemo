@@ -45,6 +45,10 @@ const translations = {
         },
       ],
     },
+    marcas: {
+      eyebrow: '◆ Nuestras marcas',
+      title: 'Trabajamos con los mejores.',
+    },
     contacto: {
       eyebrow: '◆ Contacto',
       title: 'Hablemos.',
@@ -99,6 +103,10 @@ const translations = {
           items: ['Office furniture', 'Commercial and corporate spaces', 'Home furniture', 'Project-based customization'],
         },
       ],
+    },
+    marcas: {
+      eyebrow: '◆ Our brands',
+      title: 'We work with the best.',
     },
     contacto: {
       eyebrow: '◆ Contact',

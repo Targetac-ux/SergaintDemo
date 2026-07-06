@@ -24,3 +24,53 @@ body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
+
+/* ── Marquee de marcas ─────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-outer {
+  overflow: hidden;
+  cursor: default;
+}
+
+.marquee-outer:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 48px;
+  transition: transform 0.2s ease;
+}
+
+.marquee-item:hover {
+  transform: scale(1.05);
+}
+
+.logo-img {
+  height: 100%;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.45);
+  transition: filter 0.3s ease;
+  user-select: none;
+}
+
+.marquee-item:hover .logo-img {
+  filter: grayscale(0) opacity(1);
+}
