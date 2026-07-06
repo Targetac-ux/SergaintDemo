@@ -48,7 +48,7 @@ export default function Hero() {
       >
         {h.titleLine1}
         <br />
-        <em className="italic text-champagne not-italic" style={{ fontStyle: 'italic' }}>{h.titleEm}</em>{' '}
+        <em className="italic text-champagne" style={{ fontStyle: 'italic' }}>{h.titleEm}</em>{' '}
         {h.titleLine2}
       </motion.h1>
 
@@ -60,18 +60,44 @@ export default function Hero() {
         {h.sub}
       </motion.p>
 
-      <motion.a
+      <motion.div
         {...reveal(0.35)}
-        href="#servicios"
-        className="font-montserrat font-bold text-[0.68rem] tracking-[0.2em] uppercase text-marfil bg-rojo
-          px-[2.75rem] py-4 rounded-[2px] no-underline relative z-10
-          transition-all duration-200 hover:bg-rojo-dark hover:-translate-y-0.5"
-        style={{ boxShadow: undefined }}
-        onMouseEnter={e => (e.currentTarget.style.boxShadow = '0 8px 24px rgba(166,25,46,0.35)')}
-        onMouseLeave={e => (e.currentTarget.style.boxShadow = '')}
+        className="relative z-10 flex flex-col items-center gap-5"
       >
-        {h.cta}
-      </motion.a>
+        <div className="flex gap-4 flex-wrap justify-center">
+          <a
+            href="#contacto"
+            className="font-montserrat font-bold text-[0.68rem] tracking-[0.2em] uppercase text-marfil bg-rojo
+              px-[2.75rem] py-4 rounded-[2px] no-underline
+              transition-all duration-200 hover:bg-rojo-dark hover:-translate-y-0.5"
+            onMouseEnter={e => (e.currentTarget.style.boxShadow = '0 8px 24px rgba(166,25,46,0.35)')}
+            onMouseLeave={e => (e.currentTarget.style.boxShadow = '')}
+          >
+            {h.cta}
+          </a>
+          <a
+            href="#servicios"
+            className="font-montserrat font-bold text-[0.68rem] tracking-[0.2em] uppercase
+              px-[2.75rem] py-4 rounded-[2px] no-underline
+              transition-all duration-200 hover:-translate-y-0.5"
+            style={{ color: '#C2A878', border: '1px solid rgba(194,168,120,0.5)', background: 'transparent' }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = '#C2A878'
+              e.currentTarget.style.color = '#1C1C1E'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = 'transparent'
+              e.currentTarget.style.color = '#C2A878'
+            }}
+          >
+            {h.ctaSecondary}
+          </a>
+        </div>
+
+        <p className="font-inter text-[0.75rem] text-piedra tracking-[0.06em] text-center max-w-[440px]">
+          {h.trust}
+        </p>
+      </motion.div>
 
       <motion.div
         {...reveal(0.35)}

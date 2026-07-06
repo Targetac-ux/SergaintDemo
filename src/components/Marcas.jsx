@@ -20,7 +20,8 @@ export default function Marcas() {
 
   return (
     <section id="marcas" className="bg-marfil overflow-hidden" style={{ padding: '7rem 0' }}>
-      <div className="max-w-[1140px] mx-auto px-10 mb-14">
+      <div className="marcas-pad" style={{ padding: '0 5rem' }}>
+      <div className="max-w-[1140px] mx-auto mb-14">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,6 +42,7 @@ export default function Marcas() {
         >
           {m.title}
         </motion.h2>
+      </div>
       </div>
 
       {/* Marquee strip */}
@@ -73,6 +75,12 @@ export default function Marcas() {
           ))}
         </div>
       </motion.div>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .marcas-pad { padding-left: 1.75rem !important; padding-right: 1.75rem !important; }
+        }
+      `}</style>
     </section>
   )
 }

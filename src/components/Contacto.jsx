@@ -38,11 +38,18 @@ export default function Contacto() {
 
         <motion.h2
           {...reveal(0)}
-          className="font-playfair font-medium text-marfil leading-[1.2] mb-14"
+          className="font-playfair font-medium text-marfil leading-[1.2] mb-5"
           style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}
         >
           {c.title}
         </motion.h2>
+
+        <motion.p
+          {...reveal(0)}
+          className="font-inter text-[1rem] text-piedra mb-12"
+        >
+          {c.sub}
+        </motion.p>
 
         <motion.div {...reveal(0)} className="flex gap-12 flex-wrap">
           {c.cards.map(({ label, value }) => (
